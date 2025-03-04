@@ -1,0 +1,121 @@
+// @import './iconfont/iconfont.scss';
+
+// $bgColor: #F5F5F5; // 背景颜色
+$bgColor: #FFFFFF; // 背景颜色
+// $color: #383838; // 全局字体颜色
+$color: #333333; // 全局字体颜色
+$btnColor: #FF6918; // 按扭颜色
+
+$lineColor: #F1F1F1; // 全局边线颜色
+$placeColor: #A6A6A6; // 全局 placeholder color
+$dangerColor: #EC475A; // 警告按钮
+
+// 字体颜色
+$tipsColor: #888888;
+$borderColor: #E5E5E5; // 边线颜色
+$txtColor: #666666;
+
+$leftColor: #777777;
+$priceColor: #FF2F00; // 钱
+$markColor: #A6A6A6;
+$markBg: #FF8D1A;
+
+// 圆角大小
+$brsize: 20rpx;
+
+// 字体大小
+$fs20: 20rpx;
+$fs22: 22rpx;
+$fs24: 24rpx;
+$fs26: 26rpx;
+$fs28: 28rpx;
+$fs30: 30rpx;
+$fs32: 32rpx;
+$fs34: 34rpx;
+$fs36: 36rpx;
+$fs38: 38rpx;
+$fs40: 40rpx;
+$fs42: 42rpx;
+$fs44: 44rpx;
+$fs46: 46rpx;
+$fs48: 48rpx;
+$fs50: 50rpx;
+$fs52: 52rpx;
+
+.page{
+	min-height: 100vh;
+	box-sizing: border-box;
+}
+.my-btn{
+	line-height: 84rpx;
+	font-size: $fs32;
+	letter-spacing: 2rpx;
+	border-radius: 45rpx;
+	border: 1px solid $btnColor;
+}
+.my-btn[type="primary"]{
+	background: $btnColor;
+}
+.my-btn[type="success"] {
+	color: #FFFFFF;
+	border-color: #69C548;
+	background: #69C548;
+}
+.my-btn[type="danger"] {
+	color: #FFFFFF;
+	border-color: $dangerColor;
+	background: $dangerColor;
+}
+.my-btn[type="default"] {
+	color: $btnColor;
+	background: #FFFFFF;
+}
+.my-btn[type="success"].button-hover {
+	color: hsla(0, 0%, 100%, .6);
+}
+.my-btn::after{
+	border: none;
+}
+
+
+// 图片阴影
+.my-img-shadow{
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+// 上下左右居中
+%myCenter{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// 底部边线样式
+.myBorderBottom{
+	border-bottom: 1px solid $lineColor;
+}
+
+// 头部边线样式
+.myBorderTop{
+	border-top: 1px solid $lineColor;
+}
+
+// 单行溢出...
+%overflowSingle {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+
+.supTitle{
+	font-size: $fs42;
+}
+
+.bigTitle{
+	font-size: $fs36;
+}
+
+.smTitle{
+	font-size: $fs32;
+}

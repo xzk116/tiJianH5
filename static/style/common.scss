@@ -1,0 +1,256 @@
+@import '@/static/style/basics.scss';
+
+// 公共底部
+.my-footer{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #FFFFFF;
+	z-index: 99;
+	padding: 20px 15px;
+	display: flex;
+	.mf-card{
+		flex: 1;
+	}
+	&.mf-two{
+		.mf-card{
+			&:nth-child(1){
+				padding-right: 20rpx;
+			}
+			&:nth-child(2){
+				padding-left: 20rpx;
+			}
+		}
+	}
+}
+
+// 因公tips提示
+.my-receipt{
+	display: inline-block;
+	background: #FF8D1A;
+	font-size: $fs20;
+	padding: 0 12rpx;
+	line-height: 40rpx;
+	border-radius: 6rpx;
+	// margin-left: 10rpx;
+	vertical-align: 4rpx;
+	color: #FFFFFF;
+	transform: scale(0.8);
+}
+
+// 卡片信息
+.my-info-card{
+	background: #FFFFFF;
+	border-radius: $brsize;
+	padding: 15px;
+	box-sizing: border-box;
+	letter-spacing: 2rpx;
+	margin-bottom: 15px;
+	.mi-head{
+		font-size: $fs28;
+		font-weight: 700;
+		margin-bottom: 20rpx;
+	}
+	.mi-row{
+		display: flex;
+		line-height: 60rpx;
+		.mr-tit{
+			width: 200rpx;
+		}
+		.mr-con{
+			flex: 1;
+			letter-spacing: 0;
+			text-align: right;
+		}
+		.mr-more-row{
+			line-height: 40rpx;
+			padding-top: 10rpx;
+		}
+	}
+}
+
+// 公共关闭
+.pop-close{
+	position: absolute;
+	color: #808080;
+	top: 3px;
+	right: 3px;
+	font-size: 36rpx;
+	width: 70rpx;
+	height: 70rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// 示例卡片
+.exam-card{
+	border-radius: $brsize;
+	background: #FFFFFF;
+	padding: 20px 15px;
+	margin-bottom: 15px;
+	.ec-head{
+		@extend %myCenter;
+	}
+	.ec-tit{
+		font-size: $fs36;
+		font-weight: 500;
+		letter-spacing: 2rpx;
+		margin-right: 10rpx;
+	}
+	.my-hz{
+		margin: 0;
+	}
+	.ec-main{
+		margin: 20rpx 0 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		overflow-x: auto;
+		&.oneCard{
+			justify-content: center;
+		}
+		.ec-between{
+			width: 30rpx;
+		}
+		.ec-card{
+			border: 1px solid $lineColor;
+		}
+		.ec-img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.ec-footer{
+		margin-top: 20rpx;
+		text-align: center;
+	}
+}
+
+// 头部导航下面阴影
+
+.headShadow{
+	box-shadow: 0px 1px 4px 0px rgba(0,0,0,.05);
+}
+
+// 赠送
+.zs-span{
+	display: inline-block;
+	padding: 6rpx 8rpx;
+	font-size: $fs20;
+	color: #FFFFFF;
+	background: $markBg;
+	border-radius: 8rpx;
+	margin-left: 10rpx;
+}
+
+// 搜索公共头部
+.my-search{
+	width: 100%;
+	height: 72rpx;
+	border-radius: 36rpx;
+	position: relative;
+	background: $bgColor;
+	.uni-input{
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+		padding: 0 80rpx;
+		font-size: $fs24;
+	}
+	.input-close{
+		width: 40rpx;
+		height: 40rpx;
+		position: absolute;
+		top: 16rpx;
+		right: 28rpx;
+	}
+	.search-icon{
+		width: 50rpx;
+		height: 50rpx;
+		position: absolute;
+		top: 15rpx;
+		left: 22rpx;
+	}
+}
+
+// 回执标志
+.my-hz{
+	width: 104rpx;
+	height: 36rpx;
+	background: linear-gradient(232.33deg, #F5BD95 0%, #F5DCC6 100%);
+	border-radius: 8rpx;
+	margin: 10rpx 0 15rpx;
+	font-size: $fs20;
+	border: 1rpx solid #F5BD95;
+	@extend %myCenter;
+	&.hide{
+		visibility: hidden;
+	}
+	.hz-icon{
+		width: 26rpx;
+		height: 24rpx;
+		margin-right: 5rpx;
+	}
+}
+
+// 搜索空数据
+.search-empty{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	padding-top: 100rpx;
+	.empty-bg{
+		width: 400rpx;
+		height: 350rpx;
+	}
+	.empty-txt{
+		text-align: center;
+		color: #A6A6A6;
+		letter-spacing: 2rpx;
+		font-size: 28rpx;
+	}
+}
+
+// 规格列表
+.gg-main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	.item {
+		width: 48%;
+		height: 170rpx;
+		background: #FFFFFF;
+		border-radius: 15rpx;
+		position: relative;
+		box-sizing: border-box;
+		padding: 10px;
+		margin-bottom: 15rpx;
+	}
+
+	.item-name {
+		color: #2B303E;
+		letter-spacing: 1rpx;
+		width: 100%;
+		font-size: 28rpx;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		margin-bottom: 20rpx;
+	}
+
+	.item-tip {
+		font-size: 24rpx;
+		color: #999999;
+		margin-bottom: 8rpx;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

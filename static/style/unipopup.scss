@@ -1,0 +1,23 @@
+@import '@/static/style/basics.scss';
+.uni-popup{
+	position: relative;
+	z-index: 9999;
+}
+.layer{
+	width: 600rpx;
+	border-radius: 20rpx;
+	background: #FFFFFF;
+	box-sizing: border-box;
+	padding: 15px;
+	.l-head{
+		font-size: $fs32;
+		text-align: center;
+		padding: 20rpx 0;
+	}
+	.cancel{
+		color: $tipsColor;
+	}
+	.enter{
+		color: $btnColor;
+	}
+}

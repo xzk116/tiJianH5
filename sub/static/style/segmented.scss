@@ -1,0 +1,163 @@
+@mixin flexCenter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+::v-deep .uni-collapse-item__title-box {
+	padding: 0;
+	font-size: 36rpx;
+}
+
+::v-deep .uni-collapse-item__title-text {
+	font-size: 36rpx;
+}
+
+::v-deep .uni-select {
+	border: none;
+}
+::v-deep .uni-select__input-placeholder {
+	color: grey;
+	font-size: 16px;
+}
+
+::v-deep .uni-collapse-item {
+	margin-bottom: 20rpx;
+}
+
+.tab-item {
+	width: 100%;
+
+	.con {
+		padding-bottom: 40rpx;
+		box-sizing: border-box;
+	}
+	// 每行上下布局
+	.rowTb {
+		width: 100%;
+		padding: 20rpx 0 20rpx 10rpx;
+		box-sizing: border-box;
+
+		::v-deep .uni-select__selector-scroll {
+			max-height: 100px;
+		}
+
+		.row-t {
+			width: 100%;
+			font-size: 36rpx;
+			margin-bottom: 10rpx;
+		}
+		.row-b {
+			height: 72rpx;
+			border-radius: 10rpx;
+			border: 1px solid #f0f0f0;
+			@include flexCenter;
+			.uni-combox {
+				width: 100%;
+			}
+		}
+	}
+	// 每行左右布局
+	.row {
+		width: 100%;
+		@include flexCenter;
+		padding: 20rpx 0;
+		box-sizing: border-box;
+		// 行左
+		.row-l {
+			width: 280rpx;
+			font-size: 36rpx;
+			display: flex;
+			align-items: center;
+			.text {
+				width: 20rpx;
+				color: #ff0000;
+			}
+			.tit {
+				width: 250rpx;
+			}
+		}
+		// 行右
+		.row-r {
+			width: calc(100% - 300rpx);
+			.pick {
+				width: 100%;
+				@include flexCenter;
+				border: 1px solid #f0f0f0;
+				padding: 20rpx;
+				box-sizing: border-box;
+				border-radius: 10rpx;
+				.pick-l {
+					width: 90%;
+					color: grey;
+					font-size: 16px;
+				}
+				.pick-r {
+					width: 8%;
+				}
+			}
+			// 实足年龄
+			.pick-year {
+				width: 100%;
+				height: 72rpx;
+				@include flexCenter;
+				// padding: 20rpx;
+				// box-sizing: border-box;
+				border-radius: 10rpx;
+
+				.year-box {
+					width: 45%;
+					height: 100%;
+					@include flexCenter;
+					border: 1px solid #f0f0f0;
+					padding: 0 20rpx;
+					box-sizing: border-box;
+				}
+			}
+			// 下拉框
+			.pick-select {
+				width: 100%;
+				height: 72rpx;
+				border-radius: 10rpx;
+				border: 1px solid #f0f0f0;
+				@include flexCenter;
+				.uni-combox {
+					width: 100%;
+				}
+			}
+			// 输入框
+			.pick-ipt {
+				width: 100%;
+				// height: 72rpx;
+				padding: 20rpx;
+				box-sizing: border-box;
+				border-radius: 10rpx;
+				border: 1px solid #f0f0f0;
+				@include flexCenter;
+			}
+			// 身高体重
+			.tizhong {
+				width: 100%;
+				height: 72rpx;
+				border-radius: 10rpx;
+				@include flexCenter;
+				border: 1px solid #f0f0f0;
+				border-right: none;
+				.tizhong-l {
+					width: calc(100% - 74rpx);
+					height: 100%;
+					@include flexCenter;
+					padding: 0 20rpx;
+					box-sizing: border-box;
+				}
+				.tizhong-r {
+					width: 72rpx;
+					height: 100%;
+					text-align: center;
+					line-height: 72rpx;
+					border: 1px solid #f0f0f0;
+				}
+			}
+		}
+	}
+}

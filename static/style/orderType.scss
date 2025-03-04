@@ -1,0 +1,178 @@
+$cWidth: 310rpx;
+
+.lm-main{
+	margin-bottom: 30rpx;
+	background: #FFFFFF;
+	border-radius: 20rpx;
+	padding: 30rpx;
+	&:last-child{
+		margin-bottom: 0;
+	}
+	.lm-head{
+		display: flex;
+		line-height: 46rpx;
+		margin-bottom: 20rpx;
+		.lmh-tit{
+			width: 150rpx;
+		}
+		.lmh-right{
+			flex: 1;
+			text-align: right;
+			color: $markColor;
+			font-size: $fs24;
+		}
+		.lmh-txt{
+			display: inline;
+		}
+		.wh-icon{
+			width: 30rpx;
+			height: 30rpx;
+			vertical-align: -6rpx;
+			margin-left: 8rpx;
+		}
+	}
+}
+.server-con{
+	.lm-row{
+		display: flex;
+		justify-content: space-between;
+		font-size: $fs28;
+		margin-bottom: 10rpx;
+		height: 42rpx;
+		&:last-child{
+			margin-bottom: 0;
+		}
+		.lr-r{
+			color: $priceColor;
+		}
+	}
+}
+
+.send-con{
+	display: flex;
+	justify-content: space-between;
+	.sc-card{
+		width: 268rpx;
+		height: 80rpx;
+		border-radius: 20rpx;
+		border: 1px solid $lineColor;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 10px;
+		color: $markColor;
+		.sc-r{
+			color: $priceColor;
+		}
+		&.ac{
+			color: $btnColor;
+			border-color: $btnColor;
+		}
+	}
+}
+
+.la-add{
+	@extend .myCenter;
+	.la-icon{
+		width: 50rpx;
+		height: 50rpx;
+		margin-right: 20rpx;
+	}
+	.la-img{
+		width: 100%;
+		height: 100%;
+	}
+}
+.la-after{
+	display: flex;
+	.lf-l{
+		width: 80rpx;
+		display: flex;
+		align-items: center;
+		.add-icon{
+			width: 50rpx;
+			height: 50rpx;
+		}
+	}
+	.lf-r{
+		width: 40rpx;
+		display: flex;
+		align-items: center;
+		.r-icon{
+			width: 40rpx;
+			height: 40rpx;
+		}
+	}
+	.lf-c{
+		flex: 1;
+		.lf-tit{
+			width: 540rpx;
+			// overflow: hidden;
+			// text-overflow: ellipsis;
+			// white-space: nowrap;
+		}
+		.lf-name{
+			margin-right: 10rpx;
+		}
+		.lf-tips{
+			font-size: $fs24;
+			margin-top: 10rpx;
+			color: $tipsColor;
+		}
+	}
+}
+
+.lm-container{
+	margin-top: 20rpx;
+	display: flex;
+	justify-content: space-between;
+	.lm-card{
+		width: $cWidth;
+		border-radius: 10rpx;
+		overflow: hidden;
+		box-sizing: border-box;
+		border:1px solid transparent;
+		&.ac{
+			border-color:$btnColor;
+			position: relative;
+			&::after{
+				content: '';
+				@extend .jb-icon;
+			}
+		}
+		.lc-img{
+			width: 100%;
+			vertical-align: top;
+		}
+		.lc-footer{
+			background: $bgColor;
+			padding: 15rpx 20rpx;
+			font-size: $fs26;
+			.lf-row{
+				display: flex;
+				justify-content: space-between;
+			}
+			.lf-price{
+				color: $priceColor;
+			}
+			.lf-zs{
+				height: 30rpx;
+				line-height: 30rpx;
+				margin-top: 5rpx;
+				color: $priceColor;
+				font-size: $fs22;
+				text-align: center;
+			}
+		}
+	}
+}
+// 大角标
+.jb-icon{
+	width: 70rpx;
+	height: 54rpx;
+	background: url(/static/img/jb-icon.png) no-repeat 0 0;
+	background-size: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
