@@ -47,6 +47,7 @@
 			font-size: 36rpx;
 			margin-bottom: 10rpx;
 		}
+		// 下拉
 		.row-b {
 			height: 72rpx;
 			border-radius: 10rpx;
@@ -55,6 +56,15 @@
 			.uni-combox {
 				width: 100%;
 			}
+		}
+		// 输入框
+		.b-ipt {
+			width: 100%;
+			border-radius: 10rpx;
+			border: 1px solid #f0f0f0;
+			@include flexCenter;
+			padding: 20rpx;
+			box-sizing: border-box;
 		}
 	}
 	// 每行左右布局
@@ -80,6 +90,7 @@
 		// 行右
 		.row-r {
 			width: calc(100% - 300rpx);
+
 			.pick {
 				width: 100%;
 				@include flexCenter;
@@ -116,13 +127,19 @@
 			}
 			// 下拉框
 			.pick-select {
-				width: 100%;
+				// width: 100%;
 				height: 72rpx;
 				border-radius: 10rpx;
 				border: 1px solid #f0f0f0;
 				@include flexCenter;
 				.uni-combox {
 					width: 100%;
+				}
+			}
+			// 需要缩短的下拉框
+			.pick-select-sort {
+				::v-deep .uni-select__selector-scroll {
+					max-height: 100px;
 				}
 			}
 			// 输入框
